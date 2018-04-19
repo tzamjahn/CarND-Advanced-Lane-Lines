@@ -198,7 +198,7 @@ def image_pipeline(img):
         side = 'right'
 
     cv2.putText(result,'Radius of Curvature = '+str(round((left_curverad+right_curverad/2),2))+' (m)',(50,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
-    cv2.putText(result,str(round((D_from_center),2))+' (m) '+side+ ' of center',(50,100),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
+    cv2.putText(result,str(round(abs((D_from_center)),2))+' (m) '+side+ ' of center',(50,100),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
 
     #Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
     return result
